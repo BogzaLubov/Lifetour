@@ -1,0 +1,169 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(variables.$overlay-color-accent, 0.2);
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 33px 45px 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 38px 120px 30px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 25px 20px 20px;
+  }
+}
+
+.footer__logo {
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 3px;
+    margin-right: 16px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 29px;
+    margin-right: 114px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    margin-bottom: 31px;
+    gap: 23px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 22px;
+    gap: 23px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    flex-direction: column;
+    margin-bottom: 16px;
+    gap: 11px;
+  }
+}
+
+.footer__phone {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(18px, 18px, 600);
+
+    display: block;
+    text-align: right;
+    color: inherit;
+    grid-column: 3/-1;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 138px;
+
+    &:hover {
+      color: rgba(variables.$bg-color-secondary, 0.1);
+    }
+
+    &:focus {
+      color: variables.$button-color-primary;
+    }
+
+    &:active {
+      color: variables.$font-color-active;
+    }
+
+    &:disabled {
+      color: variables.$font-color-disabled;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+// .footer__social {
+//   @include mixins.list-base;
+
+//   display: flex;
+//   flex-direction: row;
+//   gap: 16px;
+
+//   @include mixins.mobile {
+//     margin-bottom: 22px;
+//   }
+
+//   @include mixins.tablet {
+//     margin-bottom: 32px;
+//   }
+
+//   @include mixins.desktop {
+//     margin-bottom: 24px;
+//     gap: 12px;
+//   }
+// }
+
+// .footer__social-link {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   min-width: 33px;
+//   min-height: 30px;
+//   border: 1px solid variables.$font-color-disabled;
+// }
+
+.footer__link {
+  @include mixins.set-font(12px, 12px, 400);
+
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid variables.$transparent-color;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$button-color-primary;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}

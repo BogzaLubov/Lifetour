@@ -1,0 +1,347 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.training {
+  @media (min-width: variables.$tablet-width) {
+    background-repeat: no-repeat;
+    background-size: 465px 280px;
+    background-position: 100% 620px;
+    background-image:
+      image-set(
+        "../img/decorations/clouds-2-tablet@1x.webp" type("image/webp"),
+        "../img/decorations/clouds-2-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+          "../img/decorations/clouds-2-tablet@2x.webp" type("image/webp"),
+          "../img/decorations/clouds-2-tablet@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image: none;
+  }
+}
+
+.training__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 59px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 62px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding-top: 68px;
+    padding-bottom: 15px;
+  }
+}
+
+.training__header {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 33px;
+  }
+}
+
+.training__header + p {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 820px;
+    margin-bottom: 59px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(14px, 20px, 400);
+
+    margin: 0 0 29px;
+  }
+}
+
+.training__subheader-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 22px;
+  }
+}
+
+.training__subheader {
+  margin: 0;
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(25px, 25px, 800);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(35px, 35px, 800);
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(22px, 22px, 800);
+  }
+}
+
+.training__pagination {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    gap: 4px;
+    margin-top: -3px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.training__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.training__item {
+  background-color: variables.$bg-color-primary;
+  border: 1px solid rgba(variables.$bg-color-secondary, 0.1);
+  padding: 14px 14px 15px;
+  height: auto;
+}
+
+.training__slider {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 43px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 10px;
+  }
+}
+
+.training__details {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  padding-top: 10px;
+}
+
+.training__details h4 {
+  @include mixins.set-font(14px, 16px, 700);
+
+  display: inline-block;
+  max-width: 100px;
+  margin: 1px 0 14px;
+  grid-column: 1/2;
+}
+
+.training__details p {
+  @include mixins.set-font(12px, 16px, 400);
+
+  margin: 0;
+  grid-column: 1/-1;
+  order: 2;
+}
+
+.training__socials {
+  position: relative;
+  grid-column: 2/3;
+  width: 24px;
+  height: 24px;
+  order: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 14px;
+    height: 8px;
+    top: 7px;
+    left: 4px;
+    mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+    background-color: variables.$font-color-primary;
+  }
+
+  &:active::before {
+    background-color: variables.$icon-color-accent;
+  }
+}
+
+.training__process-header {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(18px, 18px, 700);
+    margin: 0 0 100px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(21px, 21px, 700);
+    margin: 0 0 23px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(16px, 16px, 700);
+    margin: 0 0 23px;
+  }
+}
+
+.training__process-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "map  mountains"
+      "boot forest";
+    row-gap: 104px;
+    column-gap: 134px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 254px 254px 254px 254px;
+    grid-template-areas: "map boot forest mountains";
+    gap: 0;
+    margin-right: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: auto;
+
+      width: 100%;
+      height: 2px;
+      left: 20px;
+      right: 20px;
+      bottom: 6px;
+      background-color: variables.$icon-color-secondary;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      width: 2px;
+      left: 6px;
+      background-color: variables.$icon-color-secondary;
+    }
+  }
+}
+
+.training__process-item {
+  position: relative;
+  min-height: auto;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(14px, 22px, 400);
+
+    padding: 0 0 0 35px;
+    background-position: 0 1px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    background-position: 10px 5px;
+    padding: 3px 0 0 44px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: variables.$icon-color-secondary;
+      left: 20px;
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(12px, 18px, 400);
+
+    padding: 0 0 0 63px;
+    background-position: 29px 1px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: variables.$icon-color-secondary;
+      left: 0;
+      top: 12px;
+    }
+  }
+}
+
+.training__process-title {
+  max-width: 200px;
+  margin: 0;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.training__process-item--map {
+  background-image: url("/__spritemap#sprite-map-view");
+  grid-area: map;
+}
+
+.training__process-item--boot {
+  background-image: url("/__spritemap#sprite-boots-view");
+  grid-area: boot;
+}
+
+.training__process-item--forest {
+  background-image: url("/__spritemap#sprite-forest-view");
+  grid-area: forest;
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.training__process-item--mountains {
+  background-image: url("/__spritemap#sprite-hills-view");
+  grid-area: mountains;
+}

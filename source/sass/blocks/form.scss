@@ -1,0 +1,196 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.form {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  background-color: variables.$bg-color-alternative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: variables.$tablet-width) {
+    background-image:
+      image-set(
+        "../img/form/form-tablet@1x.webp" type("image/webp"),
+        "../img/form/form-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+          "../img/form/form-tablet@2x.webp" type("image/webp"),
+          "../img/form/form-tablet@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image:
+      image-set(
+        "../img/form/form-desktop@1x.webp" type("image/webp"),
+        "../img/form/form-desktop@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+          "../img/form/form-desktop@2x.webp" type("image/webp"),
+          "../img/form/form-desktop@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    background-position-x: -36px;
+    background-image:
+      image-set(
+        "../img/form/form-mobile@1x.webp" type("image/webp"),
+        "../img/form/form-mobile@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+          "../img/form/form-mobile@2x.webp" type("image/webp"),
+          "../img/form/form-mobile@2x.png" type("image/png")
+        );
+    }
+  }
+}
+
+.form__wrapper {
+  color: variables.$font-color-accent;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 186px 204px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 184px 204px;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 177px 31px 175px;
+  }
+}
+
+.form__wrapper h2 {
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(25px, 25px, 800);
+
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(35px, 35px, 800);
+
+    margin: 17px 0 15px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(22px, 22px, 800);
+
+    margin: 0 0 17px;
+  }
+}
+
+.form__wrapper p {
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    margin: 0 auto 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(12px, 18px, 400);
+
+    max-width: 220px;
+    margin: 0 auto 20px;
+  }
+}
+
+.form__info {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 180px;
+    gap: 30px;
+    max-width: 960px;
+  }
+}
+
+.form__contacts {
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 36px;
+  }
+}
+
+.form__input {
+  @include mixins.set-font(16px, 16px, 400);
+
+  width: 100%;
+  border: 1px solid rgba(variables.$bg-color-secondary, 0.1);
+  border-radius: 2px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 17px 30px;
+    margin-bottom: 11px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 14px 15px;
+    margin-bottom: 9px;
+  }
+
+  &:hover {
+    border-color: variables.$bg-color-secondary;
+  }
+
+  &:focus {
+    border-color: variables.$button-color-accent;
+  }
+
+  &:disabled {
+    border-color: variables.$font-color-disabled;
+  }
+
+  &:hover::placeholder {
+    color: variables.$icon-color-secondary;
+    opacity: 0.5;
+  }
+}
+
+.form__input--invalid {
+  border-color: variables.$font-color-error;
+}
+
+.form__button {
+  @include mixins.set-font(16px, 16px, 500);
+
+  width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 19px 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: fit-content;
+    padding: 19px 20px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 20px 15px;
+  }
+}

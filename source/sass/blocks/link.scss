@@ -1,0 +1,48 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$font-color-primary;
+
+  &:hover {
+    color: rgba(variables.$button-color-primary, 0.1);
+  }
+
+  &:focus {
+    color: variables.$button-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.link--social {
+  border: 1px solid rgba(variables.$icon-color-primary, 0.3);
+
+  &:hover {
+    color: variables.$font-color-primary;
+    border-color: variables.$icon-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$transparent-color;
+  }
+
+  &:active {
+    color: variables.$font-color-accent;
+    background-color: variables.$icon-color-secondary;
+  }
+
+  &:disabled {
+    border-color: variables.$icon-color-primary;
+    opacity: 0.3;
+  }
+}

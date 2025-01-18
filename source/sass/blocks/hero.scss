@@ -1,0 +1,418 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.hero {
+  color: variables.$font-color-accent;
+}
+
+.hero__container {
+  position: relative;
+  background-color: variables.$bg-color-secondary;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hero__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__item {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 120px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 40px 15px 56px;
+  }
+}
+
+.hero__item--caucasus {
+  @media (min-width: variables.$tablet-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-1-tablet@1x.webp" type("image/webp"),
+        "../img/hero/hero-1-tablet@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-1-tablet@2x.webp" type("image/webp"),
+          "../img/hero/hero-1-tablet@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-1-desktop@1x.webp" type("image/webp"),
+        "../img/hero/hero-1-desktop@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-1-desktop@2x.webp" type("image/webp"),
+          "../img/hero/hero-1-desktop@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-1-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-1-mobile@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-1-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-1-mobile@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.hero__item--kamchatka {
+  @media (min-width: variables.$tablet-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-2-tablet@1x.webp" type("image/webp"),
+        "../img/hero/hero-2-tablet@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-2-tablet@2x.webp" type("image/webp"),
+          "../img/hero/hero-2-tablet@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-2-desktop@1x.webp" type("image/webp"),
+        "../img/hero/hero-2-desktop@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-2-desktop@2x.webp" type("image/webp"),
+          "../img/hero/hero-2-desktop@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-2-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-2-mobile@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-2-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-2-mobile@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.hero__item--altai {
+  @media (min-width: variables.$tablet-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-3-tablet@1x.webp" type("image/webp"),
+        "../img/hero/hero-3-tablet@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-3-tablet@2x.webp" type("image/webp"),
+          "../img/hero/hero-3-tablet@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-3-desktop@1x.webp" type("image/webp"),
+        "../img/hero/hero-3-desktop@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-3-desktop@2x.webp" type("image/webp"),
+          "../img/hero/hero-3-desktop@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    background:
+      variables.$overlay-color-primary,
+      image-set(
+        "../img/hero/hero-3-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-3-mobile@1x.jpg" type("image/jpeg")
+      ) no-repeat;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background:
+        variables.$overlay-color-primary,
+        image-set(
+          "../img/hero/hero-3-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-3-mobile@2x.png" type("image/png")
+        ) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.hero__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: variables.$tablet-width) {
+    min-height: 1034px;
+    align-items: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    align-items: start;
+    justify-content: flex-start;
+    min-height: 800px;
+    margin: 0;
+    padding: 200px 0 77px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    min-height: 472px;
+    align-items: center;
+  }
+
+  h2 {
+    padding: 0;
+    @media (min-width: variables.$tablet-width) {
+      @include mixins.set-font(56px, 56px, 800);
+
+      margin: -16px 0 15px;
+      text-align: center;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      @include mixins.set-font(77px, 77px, 800);
+
+      margin: 0 0 23px;
+      text-align: left;
+      max-width: 900px;
+      z-index: 1;
+    }
+
+    @media (max-width: variables.$mobile-width-only) {
+      @include mixins.set-font(26px, 26px, 800);
+
+      margin: 0 0 15px;
+      text-align: center;
+    }
+  }
+
+  p {
+    @media (min-width: variables.$tablet-width) {
+      @include mixins.set-font(17px, 24px, 400);
+
+      max-width: 472px;
+      margin: 0 0 35px;
+      text-align: center;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      text-align: left;
+    }
+
+    @media (max-width: variables.$mobile-width-only) {
+      @include mixins.set-font(15px, 20px, 400);
+
+      margin: 0 0 60px;
+      text-align: center;
+    }
+  }
+}
+
+.hero__button {
+  min-width: 180px;
+  padding: 20px 20px 19px;
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 134px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin: 0 auto;
+  }
+}
+
+.hero__details {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    gap: 10px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.hero__decoration-image {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    position: absolute;
+    right: 120px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.hero__detail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid variables.$button-color-secondary;
+  padding: 14px 20px 14px 40px;
+
+  p {
+    @include mixins.set-font(12px, 16px, 400);
+
+    margin: 0;
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    background-color: variables.$font-color-accent;
+  }
+}
+
+.hero__detail--period {
+  &::before {
+    left: 12px;
+    width: 16px;
+    mask: url("/__spritemap#sprite-moon-view");
+  }
+}
+
+.hero__detail--complexity {
+  &::before {
+    left: 12px;
+    width: 16px;
+    mask: url("/__spritemap#sprite-level-view");
+  }
+}
+
+.hero__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: absolute;
+  z-index: 3;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
+
+  @media (min-width: variables.$desktop-width) {
+    left: auto;
+    right: 70px;
+    bottom: 92px;
+  }
+}
+
+.hero__pagination span {
+  border: 1px solid variables.$button-color-secondary;
+  border-radius: 50%;
+  transition: background 0.5s ease;
+  @media (min-width: variables.$tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.hero__pagination-slide--active {
+  background: variables.$button-color-secondary;
+}

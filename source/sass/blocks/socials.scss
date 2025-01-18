@@ -1,0 +1,33 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 22px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 33px;
+  min-height: 30px;
+  border: 1px solid variables.$font-color-disabled;
+}

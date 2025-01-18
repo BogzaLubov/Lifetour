@@ -1,0 +1,17 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 1440px;
+    padding: 0 120px;
+  }
+}

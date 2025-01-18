@@ -1,0 +1,249 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.tours__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 120px;
+    padding-bottom: 110px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding-top: 39px;
+  }
+}
+
+.tours__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 39px;
+  }
+}
+
+.tours__header {
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 3px;
+  }
+}
+
+.tours__pagination {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    gap: 4px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.tours__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tours__item {
+  position: relative;
+}
+
+.tours__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.tours__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.tours__details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: variables.$font-color-accent;
+  padding: 20px;
+}
+
+.tours__info {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tours__info-item {
+  @include mixins.set-font(12px, 12px, 500);
+
+  min-width: 37px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    background-color: variables.$font-color-accent;
+  }
+}
+
+.tours__info-item--place {
+  position: relative;
+  margin: 0 auto 0 0;
+  padding: 8px 11px 8px 34px;
+
+  &::before {
+    left: 12px;
+    width: 16px;
+    mask: url("/__spritemap#sprite-pin-filled-view");
+  }
+
+  &:hover::before {
+    background-color: variables.$font-color-active;
+  }
+
+  &:focus::before {
+    background-color: variables.$font-color-active;
+  }
+
+  &:active::before {
+    background-color: variables.$font-color-accent;
+  }
+
+  &:disabled::before {
+    background-color: variables.$font-color-accent;
+  }
+}
+
+.tours__info-item--days {
+  position: relative;
+  margin: 0;
+  @media (min-width: variables.$tablet-width) {
+    padding: 8px 0 8px 22px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 8px 0 8px 22px;
+  }
+
+  &::before {
+    left: -10px;
+    width: 21px;
+    mask: url("/__spritemap#sprite-sun-view");
+  }
+}
+
+.tours__info-item--night {
+  position: relative;
+  margin: 0;
+  @media (min-width: variables.$tablet-width) {
+    padding: 8px 0 8px 32px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 8px 0 8px 32px;
+  }
+
+  &::before {
+    left: 0;
+    width: 21px;
+    mask: url("/__spritemap#sprite-moon-view");
+  }
+}
+
+.tours__title {
+  @include mixins.set-font(24px, 28px, 700);
+
+  margin: 14px 0 17px;
+}
+
+.tours__additional-details {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.tours__slider {
+  margin-bottom: 30px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.tours__actions-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tours__link {
+  position: relative;
+  color: inherit;
+  letter-spacing: 0.04em;
+  padding-right: 28px;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(16px, 16px, 700);
+
+    margin-left: 9px;
+    margin-top: 1px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(14px, 14px, 700);
+
+    margin-left: 9px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 7px;
+    width: 9px;
+    height: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    mask: url("/__spritemap#sprite-chevron-view");
+    background-color: variables.$font-color-primary;
+  }
+
+  &:hover::after {
+    background-color: rgba(variables.$button-color-primary, 0.1);
+  }
+
+  &:focus::after {
+    background-color: variables.$button-color-primary;
+  }
+
+  &:active::after {
+    background-color: variables.$font-color-active;
+  }
+
+  &:disabled::after {
+    background-color: variables.$font-color-disabled;
+  }
+}

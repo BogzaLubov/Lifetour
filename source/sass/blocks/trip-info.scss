@@ -1,0 +1,24 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.trip-info__title {
+  @include mixins.set-font(12px, 12px, 300);
+
+  margin-bottom: 8px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 13px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+.trip-info__detail {
+  @include mixins.set-font(13px, 13px, 700);
+
+  margin: 0;
+}

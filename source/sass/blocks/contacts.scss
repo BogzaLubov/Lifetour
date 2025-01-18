@@ -1,0 +1,285 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.contacts__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    padding: 123px 120px 55px;
+    column-gap: 100px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding-top: 37px;
+  }
+}
+
+.contacts__header-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    padding: 0;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 0 15px;
+  }
+}
+
+.contacts__header {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: -3px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 28px;
+  }
+}
+
+.contacts__header + p {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    margin: 0 0 39px;
+    max-width: 480px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    margin: 0 0 24px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(14px, 20px, 400);
+
+    margin: 0 0 30px;
+  }
+}
+
+.contacts__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    background-color: variables.$icon-color-primary;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::after {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      top: 11px;
+      width: 26px;
+      height: 26px;
+      mask-size: 26px 26px;
+    }
+  }
+}
+
+.contacts__item--phone {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: unset;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 29px;
+  }
+
+  &::after {
+    mask: url("/__spritemap#sprite-phone-view");
+  }
+}
+
+.contacts__item--email {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: unset;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 29px;
+  }
+
+  &::after {
+    mask: url("/__spritemap#sprite-mail-view");
+  }
+}
+
+.contacts__item--address {
+  &::after {
+    mask: url("/__spritemap#sprite-pin-stroke-view");
+  }
+}
+
+.contacts__item--address .contacts__item-content {
+  @media (max-width: variables.$mobile-width-only) {
+    margin: 8px 0 0 32px;
+  }
+}
+
+.contacts__item-header {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(16px, 16px, 600);
+
+    margin: 1px 0 6px 34px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(18px, 18px, 600);
+
+    margin: 0 0 7px 33px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(14px, 14px, 600);
+
+    margin: 0 0 7px 32px;
+  }
+}
+
+.contacts__item-content {
+  @include mixins.set-font(14px, 20px, 400);
+
+  margin: 0 0 0 32px;
+  text-decoration: none;
+  color: variables.$font-color-primary;
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    margin-left: 56px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin: 0 0 0 31px;
+    max-width: 180px;
+  }
+}
+
+.contacts__item-content--link {
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  border: 1px solid variables.$transparent-color;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$button-color-primary;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.contacts__image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.contacts__image-wrapper {
+  position: relative;
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 26px;
+    margin-bottom: auto;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 28px;
+    mask: url("/__spritemap#sprite-pin-filled-view");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: variables.$icon-color-secondary;
+
+    @media (min-width: variables.$tablet-width) {
+      top: calc(50% + 10px);
+      left: calc(50% + 6px);
+      width: 32px;
+      height: 36px;
+      mask-size: 42px 42px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      top: calc(50% - 4px);
+      left: calc(50% + 59px);
+      width: 50px;
+      height: 50px;
+      mask-size: 50px 50px;
+    }
+
+    @media (max-width: variables.$mobile-width-only) {
+      top: calc(50% - 2px);
+      left: calc(50% + 38px);
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.about__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    padding: 6px 48px 40px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 585px;
+    padding: 92px 195px 100px 0;
+  }
+}
+
+.about__image-wrapper {
+  @media (max-width: variables.$mobile-width-only) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 170px;
+    margin-right: -92px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 8px;
+    margin-right: 0;
+  }
+}
+
+.about__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__info {
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 0 15px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 54px;
+  }
+
+  h3 {
+    @media (max-width: variables.$mobile-width-only) {
+      @include mixins.set-font(16px, 16px, 700);
+
+      margin: 0 0 13px;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      @include mixins.set-font(18px, 18px, 700);
+
+      margin: 0 0 12px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      @include mixins.set-font(21px, 21px, 700);
+
+      margin: 0 0 16px;
+    }
+  }
+
+  p {
+    margin: 0 0 27px;
+
+    @media (max-width: variables.$mobile-width-only) {
+      @include mixins.set-font(14px, 20px, 400);
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      @include mixins.set-font(16px, 24px, 400);
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      @include mixins.set-font(14px, 22px, 400);
+    }
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.about__info h2 {
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(22px, 22px, 800);
+
+    margin: 0 0 42px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(25px, 25px, 800);
+
+    margin: 0 0 48px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(35px, 35px, 800);
+
+    margin-bottom: 58px;
+  }
+}
+
+.about__info h2::before {
+  content: attr(data-title);
+  width: max-content;
+  position: absolute;
+  left: 0;
+  opacity: 0.03;
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(26px, 26px, 800);
+
+    bottom: 12px;
+  }
+
+  // @media (min-width: variables.$tablet-width) {
+  //   @include mixins.font-info(40px, 40px, 800);
+
+  //   bottom: 0;
+  // }
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(55px, 55px, 800);
+
+    bottom: 0;
+  }
+}

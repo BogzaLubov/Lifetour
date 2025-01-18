@@ -1,0 +1,132 @@
+@use "../common/variables";
+@use "../common/mixins";
+
+.gallery__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.gallery__header {
+  @media (min-width: variables.$tablet-width) {
+    padding: 60px 45px 0;
+
+    &::before {
+      padding-left: 40px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 123px 120px 0;
+
+    &::before {
+      padding-left: 120px;
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 37px 15px 0;
+    margin-bottom: 26px;
+  }
+}
+
+.gallery__description {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 45px 21px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 22px 120px 47px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    padding: 0 15px 31px;
+  }
+}
+
+.gallery__description p {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.set-font(14px, 22px, 400);
+
+    max-width: 382px;
+    margin: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    @include mixins.set-font(16px, 24px, 400);
+
+    max-width: 596px;
+    margin: 0;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    @include mixins.set-font(12px, 18px, 400);
+
+    margin: 0;
+  }
+}
+
+.gallery__pagination {
+  @media (min-width: variables.$tablet-width) {
+    align-self: end;
+    display: flex;
+    gap: 4px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: none;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.gallery__slider {
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 3px;
+  }
+}
+
+.gallery__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$desktop-width) {
+    max-height: 463px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    max-height: 268px;
+  }
+}
+
+.gallery__item {
+  overflow: hidden;
+}
+
+.gallery__item--twin {
+  display: grid;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-rows: 210px 202px;
+    gap: 6px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-rows: 233px 223px;
+    gap: 7px;
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    grid-template-rows: 133px 125px;
+    gap: 7px;
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  object-fit: cover;
+}
