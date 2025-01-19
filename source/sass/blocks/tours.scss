@@ -8,7 +8,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 120px;
+    padding-top: 123px;
     padding-bottom: 110px;
   }
 
@@ -33,17 +33,17 @@
   }
 }
 
-.tours__header {
-  @media (min-width: variables.$desktop-width) {
-    margin-top: 3px;
-  }
-}
-
 .tours__pagination {
   @media (min-width: variables.$tablet-width) {
     display: flex;
     gap: 4px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: -2px;
+    margin-bottom: 2px;
+  }
+
 
   @media (max-width: variables.$mobile-width-only) {
     display: none;
@@ -190,7 +190,7 @@
   margin-bottom: 30px;
 
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 57px;
+    margin-bottom: 59px;
   }
 }
 

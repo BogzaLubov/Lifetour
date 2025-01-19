@@ -275,6 +275,7 @@
 
     @media (min-width: variables.$desktop-width) {
       text-align: left;
+      max-width: 471px;
     }
 
     @media (max-width: variables.$mobile-width-only) {
