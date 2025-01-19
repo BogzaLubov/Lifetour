@@ -33,7 +33,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 62px;
+    padding-top: 65px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
@@ -45,6 +45,10 @@
 .training__header {
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 34px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 32px;
   }
 
   @media (max-width: variables.$mobile-width-only) {

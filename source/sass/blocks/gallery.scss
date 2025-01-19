@@ -37,7 +37,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 22px 120px 47px;
+    padding: 21px 120px 48px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
@@ -99,7 +99,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    max-height: 268px;
+    max-height: 269px;
   }
 }
 
@@ -107,11 +107,11 @@
   overflow: hidden;
 }
 
-.gallery__item--twin {
+.gallery__items .gallery__item--twin {
   display: grid;
 
   @media (min-width: variables.$tablet-width) {
-    grid-template-rows: 210px 202px;
+    grid-template-rows: 209px 203px;
     gap: 6px;
   }
 
@@ -121,7 +121,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    grid-template-rows: 133px 125px;
+    grid-template-rows: 134px 125px;
     gap: 7px;
   }
 }

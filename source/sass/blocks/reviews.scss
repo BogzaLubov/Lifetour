@@ -39,7 +39,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    margin: 0 15px 17px;
+    margin: 0 15px 19px;
   }
 }
 
@@ -77,7 +77,7 @@
   max-width: 100%;
   border: 1px solid variables.$bg-color-primary;
   background-color: variables.$bg-color-primary;
-  padding: 19px 19px 5px;
+  padding: 18px 19px 5px;
   box-sizing: border-box;
   box-shadow: 0 0 20px 0 rgba(variables.$bg-color-alternative, 0.1);
   margin: 15px 15px 20px;
@@ -85,7 +85,7 @@
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: max-content auto;
     gap: 30px;
     min-width: 565px;
     min-height: 277px;

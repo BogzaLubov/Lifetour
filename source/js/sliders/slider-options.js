@@ -163,7 +163,7 @@ export function getGalleryOptions() {
       prevEl: '.gallery__pagination-button-prev',
     },
     modules: [ Navigation ],
-    loop: false,
+    loop: true,
     breakpoints: {
       320: {
         allowTouchMove: true,
