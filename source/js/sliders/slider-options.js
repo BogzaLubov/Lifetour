@@ -1,7 +1,10 @@
+import { Navigation, Pagination } from "swiper/modules";
+
 export function getHeroOptions() {
   return {
     slidesPerView: 1,
     loop: true,
+    modules: [ Navigation, Pagination ],
     pagination: {
       el: '[data-pagination="hero"]',
       type: 'bullets',
@@ -28,6 +31,7 @@ export function getToursOptions() {
       nextEl: '.tours__pagination-button-next',
       prevEl: '.tours__pagination-button-prev',
     },
+    modules: [ Navigation ],
     loop: false,
     breakpoints: {
       320: {
@@ -54,6 +58,7 @@ export function getTrainingOptions() {
       nextEl: '.training__pagination-button-next',
       prevEl: '.training__pagination-button-prev',
     },
+    modules: [ Navigation ],
     loop: false,
     breakpoints: {
       320: {
@@ -81,6 +86,7 @@ export function getReviewsOptions() {
       nextEl: '.reviews__pagination-button-next',
       prevEl: '.reviews__pagination-button-prev',
     },
+    modules: [ Navigation ],
     loop: false,
     breakpoints: {
       320: {
@@ -106,6 +112,7 @@ export function getAdvOptions() {
       nextEl: '.adv__pagination-button-next',
       prevEl: '.adv__pagination-button-prev',
     },
+    modules: [ Navigation ],
     loop: true,
     slidesPerGroup: 2,
     breakpoints: {
@@ -128,7 +135,7 @@ export function getAdvOptions() {
     },
     on: {
       slideChangeTransitionEnd: function () {
-        const slides = this.slides;
+        const slides = document.querySelectorAll('.adv__item');
         const offset = 190;
         if (window.innerWidth >= 1440) {
           slides.forEach((slide) => {
@@ -137,7 +144,7 @@ export function getAdvOptions() {
         }
       },
       init: function () {
-        const slides = this.slides;
+        const slides = document.querySelectorAll('.adv__item');
         const offset = 190;
         if (window.innerWidth >= 1440) {
           slides.forEach((slide) => {
@@ -155,6 +162,7 @@ export function getGalleryOptions() {
       nextEl: '.gallery__pagination-button-next',
       prevEl: '.gallery__pagination-button-prev',
     },
+    modules: [ Navigation ],
     loop: false,
     breakpoints: {
       320: {

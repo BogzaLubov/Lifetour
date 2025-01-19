@@ -25,5 +25,18 @@ export default function buildSlider(element, options) {
     }
   });
 
+  if (options.navigation) {
+    const moveFunc = () => {
+      if (!swiper.params.loop) {
+        swiper.params.loop = true;
+        swiper.update();
+      }
+    };
+
+    document.querySelector(options.navigation.nextEl).addEventListener('click', moveFunc);
+    document.querySelector(options.navigation.prevEl).addEventListener('click', moveFunc);
+  }
+
+
   return swiper;
 }

@@ -1,10 +1,11 @@
 // https://swiperjs.com/get-started#installation
 
-// import {Navigation, Pagination} from "swiper/modules";
+
 import 'swiper/css';
 import { getHeroOptions, getGalleryOptions, getToursOptions, getTrainingOptions, getReviewsOptions, getAdvOptions } from './sliders/slider-options';
 import buildSlider from './sliders/slider-builder';
 import buildMenu from './navigation-menu/menu-builder';
+import buildForm from './form/form-builder';
 
 const heroSliderElement = document.querySelector('.hero__slider');
 buildSlider(heroSliderElement, getHeroOptions());
@@ -27,3 +28,6 @@ buildSlider(gallerySliderElement, getGalleryOptions());
 const menuButtonElement = document.querySelector('.header__menu-button');
 const menuListElement = document.querySelector('.navigation');
 buildMenu(menuButtonElement, menuListElement);
+
+const form = document.querySelector('.form__info');
+buildForm(form);

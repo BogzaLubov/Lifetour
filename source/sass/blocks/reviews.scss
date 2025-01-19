@@ -72,7 +72,7 @@
   }
 }
 
-.reviews__item {
+.reviews__items .reviews__item {
   flex-shrink: 0;
   max-width: 100%;
   border: 1px solid variables.$bg-color-primary;
@@ -84,7 +84,8 @@
   width: min-content;
 
   @media (min-width: variables.$tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 30px;
     min-width: 565px;
     min-height: 277px;
@@ -98,8 +99,9 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    display: block;
     min-height: 484px;
+    flex-direction: column;
+    min-width: fit-content;
   }
 }
 
