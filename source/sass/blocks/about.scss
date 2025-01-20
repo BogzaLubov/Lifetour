@@ -128,12 +128,6 @@
     bottom: 12px;
   }
 
-  // @media (min-width: variables.$tablet-width) {
-  //   @include mixins.font-info(40px, 40px, 800);
-
-  //   bottom: 0;
-  // }
-
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(55px, 55px, 800);
 

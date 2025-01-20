@@ -1,6 +1,3 @@
-// https://swiperjs.com/get-started#installation
-
-
 import 'swiper/css';
 import { getHeroOptions, getGalleryOptions, getToursOptions, getTrainingOptions, getReviewsOptions, getAdvOptions } from './sliders/slider-options';
 import buildSlider from './sliders/slider-builder';

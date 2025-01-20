@@ -4,8 +4,6 @@
 .page__body {
   @include mixins.set-font(14px, 20px, 400);
 
-  // padding: 0;
-  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: variables.$bg-color-primary;
@@ -73,25 +71,6 @@
     }
   }
 }
-
-// .page__container {
-//   min-width: 320px;
-//   width: 100%;
-//   max-width: 1920px;
-//   margin: 0 auto;
-
-//   @media (max-width: variables.$mobile-width-only) {
-//     padding: 15px;
-//   }
-
-//   @media (min-width: variables.$tablet-width) {
-//     padding: 19px 45px 16px;
-//   }
-
-//   @media (min-width: variables.$desktop-width) {
-//     padding: 30px 120px;
-//   }
-// }
 
 .page__header {
   position: relative;
