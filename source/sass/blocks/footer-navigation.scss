@@ -9,7 +9,7 @@
 
   @media (max-width: variables.$mobile-width-only) {
     display: grid;
-    row-gap: 4px;
+    row-gap: 3px;
     column-gap: 70px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);

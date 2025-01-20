@@ -16,7 +16,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 25px 20px 20px;
+    padding: 23px 20px 20px;
   }
 }
 
@@ -60,7 +60,7 @@
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     margin-bottom: 31px;
-    gap: 23px;
+    gap: 25px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -71,7 +71,7 @@
   @media (max-width: variables.$mobile-width-only) {
     flex-direction: column;
     margin-bottom: 16px;
-    gap: 11px;
+    gap: 13px;
   }
 }
 

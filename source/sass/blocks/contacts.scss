@@ -81,19 +81,20 @@
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
-    gap: 40px;
-    margin-bottom: 39px;
+    gap: 38px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: variables.$desktop-width) {
     flex-direction: column;
     gap: 34px;
+    margin-bottom: 39px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
     flex-direction: column;
     gap: 0;
-    margin-bottom: 29px;
+    margin-bottom: 31px;
   }
 }
 
@@ -171,7 +172,7 @@
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(16px, 16px, 600);
 
-    margin: 1px 0 6px 34px;
+    margin: 1px 0 6px 36px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -190,7 +191,7 @@
 .contacts__item-content {
   @include mixins.set-font(14px, 20px, 400);
 
-  margin: 0 0 0 32px;
+  margin: 0 0 0 33px;
   text-decoration: none;
   color: variables.$font-color-primary;
 
