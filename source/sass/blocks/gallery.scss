@@ -107,6 +107,12 @@
   overflow: hidden;
 }
 
+.gallery__item:not(.gallery__item--twin) img {
+  @media (max-width: variables.$mobile-width-only) {
+    height: 266px;
+  }
+}
+
 .gallery__items .gallery__item--twin {
   display: grid;
 

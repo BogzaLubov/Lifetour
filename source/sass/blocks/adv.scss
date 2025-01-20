@@ -182,12 +182,14 @@
 
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(16px, 16px, 600);
+
     margin-bottom: 15px;
     margin-top: 72px;
   }
 
   @media (min-width: variables.$desktop-width) {
     @include mixins.set-font(18px, 18px, 600);
+
     margin: 60px 0 15px;
     margin-top: 84px;
   }
@@ -279,9 +281,9 @@
 .adv__items .adv__item--clone {
   display: none;
 
-   @media (min-width: variables.$desktop-width) {
-     display: flex;
-   }
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+  }
 }
 
 .adv__delimiter {

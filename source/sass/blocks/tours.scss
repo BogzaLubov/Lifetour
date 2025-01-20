@@ -20,6 +20,7 @@
 .tours__header-wrapper {
   display: flex;
   justify-content: space-between;
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 25px;
   }
@@ -140,6 +141,7 @@
 .tours__info-item--days {
   position: relative;
   margin: 0;
+
   @media (min-width: variables.$tablet-width) {
     padding: 8px 0 8px 22px;
   }
@@ -158,6 +160,7 @@
 .tours__info-item--night {
   position: relative;
   margin: 0;
+
   @media (min-width: variables.$tablet-width) {
     padding: 8px 0 8px 32px;
   }

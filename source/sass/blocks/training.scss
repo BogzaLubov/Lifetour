@@ -93,6 +93,7 @@
 
 .training__subheader {
   margin: 0;
+
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(25px, 25px, 800);
   }
@@ -196,16 +197,19 @@
 .training__process-header {
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(18px, 18px, 700);
+
     margin: 0 0 100px;
   }
 
   @media (min-width: variables.$desktop-width) {
     @include mixins.set-font(21px, 21px, 700);
+
     margin: 0 0 23px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
     @include mixins.set-font(16px, 16px, 700);
+
     margin: 0 0 23px;
   }
 }

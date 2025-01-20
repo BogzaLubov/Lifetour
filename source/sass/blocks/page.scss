@@ -18,6 +18,7 @@
 .page__main {
   background-color: variables.$bg-color-primary;
   background-repeat: no-repeat;
+
   @media (min-width: variables.$tablet-width) {
     background-size: 425px 1630px;
     background-position: 100% 941px;
@@ -96,6 +97,7 @@
   position: relative;
   margin: 0;
   color: variables.$font-color-primary;
+
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(25px, 25px, 800);
   }
@@ -115,6 +117,7 @@
   position: absolute;
   left: 0;
   opacity: 0.03;
+
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(40px, 40px, 800);
 

@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from 'swiper/modules';
 
 export function getHeroOptions() {
   return {
