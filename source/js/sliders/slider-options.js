@@ -168,7 +168,7 @@ export function getGalleryOptions() {
       320: {
         allowTouchMove: true,
         slidesPerView: 2,
-        spaceBetween: 5,
+        spaceBetween: 5.5,
       },
       768: {
         allowTouchMove: true,
