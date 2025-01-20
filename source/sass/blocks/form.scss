@@ -63,7 +63,7 @@
   color: variables.$font-color-accent;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 186px 204px;
+    padding: 186px 204px 184px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -85,7 +85,7 @@
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(25px, 25px, 800);
 
-    margin: 0 0 24px;
+    margin: 1px 0 23px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -145,7 +145,7 @@
   border-radius: 2px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 17px 30px;
+    padding: 18px 30px 17px;
     margin-bottom: 11px;
   }
 
