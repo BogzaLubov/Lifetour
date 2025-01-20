@@ -138,7 +138,11 @@
 }
 
 .gallery__image--top-twin {
-  @media (max-width: variables.$mobile-width-only) {
+  @media (min-width: variables.$tablet-width) {
+    object-fit: cover;
+  }
+
+  @media (max-width: variables.$min-width) {
     max-height: 135px;
     min-height: 135px;
     object-fit: contain;
@@ -146,7 +150,11 @@
 }
 
 .gallery__image--bottom-twin {
-  @media (max-width: variables.$mobile-width-only) {
+  @media (min-width: variables.$tablet-width) {
+    object-fit: cover;
+  }
+
+  @media (max-width: variables.$min-width) {
     max-height: 125px;
     min-height: 125px;
     object-fit: contain;

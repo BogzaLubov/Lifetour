@@ -3,6 +3,7 @@ $font-family: "Montserrat", "Arial", sans-serif;
 
 // View Port Size
 // $view-port-desktop-wide: 1920px;
+$min-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: $tablet-width - 1;

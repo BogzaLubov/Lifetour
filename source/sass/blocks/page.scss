@@ -2,8 +2,6 @@
 @use "../common/mixins";
 
 .page__body {
-  @include mixins.set-font(14px, 20px, 400);
-
   display: flex;
   flex-direction: column;
   background-color: variables.$bg-color-primary;
@@ -14,6 +12,7 @@
 }
 
 .page__main {
+  flex-grow: 1;
   background-color: variables.$bg-color-primary;
   background-repeat: no-repeat;
 

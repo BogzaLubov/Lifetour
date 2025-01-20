@@ -3,7 +3,7 @@
 
 .adv {
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0;
 
   @media (min-width: variables.$tablet-width) {
     background-repeat: no-repeat;
@@ -168,7 +168,7 @@
       width: 54px;
       height: 54px;
       top: 40px;
-      left: 180px;
+      left: 190px;
     }
 
     &::after {

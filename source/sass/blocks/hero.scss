@@ -232,7 +232,7 @@
     justify-content: flex-start;
     min-height: 800px;
     margin: 0;
-    padding: 200px 0 77px;
+    padding: 200px 0 78px;
   }
 
   @media (max-width: variables.$mobile-width-only) {
@@ -253,7 +253,7 @@
     @media (min-width: variables.$desktop-width) {
       @include mixins.set-font(77px, 77px, 800);
 
-      margin: 0 0 23px;
+      margin: 0 0 22px;
       text-align: left;
       max-width: 900px;
       z-index: 1;
@@ -279,6 +279,7 @@
     @media (min-width: variables.$desktop-width) {
       text-align: left;
       max-width: 471px;
+      margin: 0 0 36px;
     }
 
     @media (max-width: variables.$mobile-width-only) {
