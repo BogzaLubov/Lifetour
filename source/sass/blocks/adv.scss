@@ -42,7 +42,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 37px 15px 20px;
+    padding: 37px 15px 18px;
   }
 }
 
@@ -96,7 +96,7 @@
   @media (max-width: variables.$mobile-width-only) {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
   }
 }
 
@@ -123,7 +123,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 20px 9px 21px;
+    padding: 20px 9px 20px;
     justify-content: center;
   }
 
@@ -178,7 +178,7 @@
 }
 
 .adv__item h3 {
-  margin: 62px 0 12px;
+  margin: 60px 0 14px;
 
   @media (min-width: variables.$tablet-width) {
     @include mixins.set-font(16px, 16px, 600);
@@ -196,6 +196,15 @@
 
   @media (max-width: variables.$mobile-width-only) {
     @include mixins.set-font(14px, 14px, 600);
+
+    margin-top: 62px;
+  }
+}
+
+.adv__item--path h3 {
+  @media (max-width: variables.$mobile-width-only) {
+    margin-top: 61px;
+    margin-bottom: 16px;
   }
 }
 
