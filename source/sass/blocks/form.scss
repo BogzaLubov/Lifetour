@@ -75,7 +75,7 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 176px 30px 175px;
+    padding: 177px 30px 174px;
   }
 }
 
@@ -118,7 +118,8 @@
     @include mixins.set-font(12px, 18px, 400);
 
     max-width: 220px;
-    margin: 0 auto 20px;
+    margin: 0 auto 19px;
+    letter-spacing: 0.01px;
   }
 }
 
@@ -150,8 +151,8 @@
   }
 
   @media (max-width: variables.$mobile-width-only) {
-    padding: 16px 15px;
-    margin-bottom: 5px;
+    padding: 16px 15px 14px;
+    margin-bottom: 7px;
   }
 
   &:hover {
