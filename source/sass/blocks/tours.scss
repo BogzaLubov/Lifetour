@@ -180,6 +180,7 @@
   @include mixins.set-font(24px, 28px, 700);
 
   margin: 14px 0 17px;
+
   @media (min-width: variables.$desktop-width) {
     margin: 14px 0 18px;
   }
